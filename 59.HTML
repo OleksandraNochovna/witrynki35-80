@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <title> Użycie fukcji</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      min-height: 100vh;
+    }
+    div {
+      font-size: 50px;
+      color: rgb(31, 31, 31);
+    }
+  </style>
+</head>
+
+<body>
+  <span>Podaj r:</span>
+  <input type="text" id="r" placeholder="podaj r">
+  <button onclick="pk_noc()">punkty kratowe</button>
+  <div id="nazwa"></div>
+
+  <script type="text/javascript">
+    function pk_noc() {
+      var r = parseFloat(document.getElementById('r').value);
+      var b = 0;
+      for (var x = 0; x < r; x++) {
+        for (var y = 0; y < r; y++) {
+          if ((x * x + y * y) <= r * r) {
+            b++;
+          }
+        }
+      }
+      b = b * 4 + 1;
+      document.getElementById("nazwa").innerHTML = "Pole kratowe = " + b;
+    }
+  </script>
+</body>
+
+</html>
+   
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Użycie funkcji</title>
+    <meta charset="utf-8">
+    <style>
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          min-height: 100vh;
+        }
+        div {
+          font-size: 50px;
+          color: rgb(31, 31, 31);
+        }
+      </style>
+</head>
+<body>
+<script type="text/javascript">
+        var i = 22;
+function pierw() {
+    for (var j = 0; j<3; j++){
+    var b = Math.sqrt(i);
+    var c = Math.sqrt(b);
+    document.getElementById("nazwa").innerHTML += "pierw_2(" + i + ") = " + b.toFixed(2) + "<br>";
+    document.getElementById("nazwa").innerHTML += "pierw_4(" + i + ") = " + c.toFixed(2) + "<br>";
+    i++; 
+        if (i > 22+15) {
+            document.getElementById("button").disabled = true;
+            break;
+        }}}
+</script>
+<input type="button" id="button" name="pierw(i)" value="pierw(i)" onclick="pierw()"><br><br>
+<div style="color:rgb(33, 33, 33); font-size:50px;" id="nazwa"></div>
+</body>
+</html>

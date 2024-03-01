@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Przykład nr X - Nazwisko</title>
+<script type="text/javascript">
+    function ZSE_Open() {
+        setTimeout(function () {
+            window.location.href = "http://zse.gda.pl";
+        }, 4000);
+    }
+    function OKE_Open() {
+        setTimeout(function () {
+            window.location.href = "http://oke.gda.pl";
+        }, 6000); 
+    }
+
+    function aaa_Open() {
+        setTimeout(function () {
+            window.location.href = "https://www.empik.com/";
+        }, 10000); 
+    }
+
+ function aaaa_Open() {
+        setTimeout(function () {
+            window.location.reload();
+        }, 8000);
+ }
+</script>
+</head>
+<body>
+<form>
+    <input type="button" name="przycisk1" value="Strona ZSE" onclick="ZSE_Open()">
+    <input type="button" name="przycisk2" value="Strona OKE" onclick="OKE_Open()">
+    <input type="button" name="przycisk3" value="aaaaa" onclick="aaa_Open()">
+    <input type="button" name="przycisk4" value="aaa" onclick="aaaa_Open()">
+</form>
+</body>
+</html>

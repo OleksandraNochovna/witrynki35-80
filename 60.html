@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie1</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+ var suma_cze=0;
+ var T_cze = new Array()
+ for (i = 0; i < 20; i++) {
+ T_cze[i] = i;
+ suma_cze=suma_cze+i;
+ document.write("T["+i+"]="+T_cze[i]+"<br>");
+ }
+ var srednia_cze=suma_cze/i;
+ document.write("suma="+suma_cze+"<br>");
+ document.write("średnia="+srednia_cze.toFixed(2)+"<br>");
+ </script>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>

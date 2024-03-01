@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <title> Użycie fukcji</title>
+  <meta charset="utf-8">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      min-height: 100vh;
+    }
+
+    div {
+      font-size: 50px;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <span>Podaj a:</span>
+  <input type="text" id="a" placeholder="podaj a">
+  <span>Podaj b:</span>
+  <input type="text" id="b" placeholder="podaj b">
+  <button onclick="calculate()">dalej</button>
+  <div id="display"></div>
+
+  <script type="text/javascript">
+    const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+    async function calculate() {
+      const displayElement = document.getElementById('display');
+      displayElement.innerHTML = '';
+      var a = parseFloat(document.getElementById('a').value);
+      var b = parseFloat(document.getElementById('b').value);
+
+      if (a < b) {
+        displayElement.style.color = 'green';
+
+        for (let i = a; i <= b; i++) {
+          if (i % 2 == 1) {
+            displayElement.innerHTML += `${i} <br>`;
+          }
+        }
+      } else if (a > b) {
+        displayElement.style.color = 'blue';
+        
+        for (var i = a; i >= b; i--) {
+          if (i % 2 == 1) {
+            displayElement.innerHTML += `${i} <br>`;
+          }
+        }
+      } else {
+        displayElement.style.color = 'black';
+        displayElement.innerHTML = "brak obliczeń";
+      }
+    }
+  </script>
+</body>
+
+</html>

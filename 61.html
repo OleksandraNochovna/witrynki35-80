@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+ <meta charset="UTF-8">
+ <title>Tabele zadanie1</title>
+</head>
+<body>
+ <script>
+function okno_zamknij_czerczon() 
+{
+window.close()
+}
+ var TT_cze = new Array(10).fill(0);
+
+ let petla = parseInt(prompt("Podaj liczbe: "));
+ for (i = 0; i < TT_cze.length && i<petla; i++) {
+    TT_cze[i] = 3*(i+1);
+ }
+ for( let i = 0; i < TT_cze.length; i++){
+    document.write("TT_cze[" +i+ "] =" +TT_cze[i]+ "<br>");
+ }
+ 
+ let ilo_cze = 1;
+ for(let i = 0; i < TT_cze.length && i<petla; i++){
+    ilo_cze *= TT_cze[i];
+ }
+
+ var srednia_cze=suma_cze/i;
+ document.write("Iloczyn liczb:"+ilo_cze+"<br>");
+ </script>
+ <input type="button" value="zamknij okno" onclick="okno_zamknij_czerczon()"/>
+</body>
+</html>
